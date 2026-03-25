@@ -1,7 +1,7 @@
 from loader import bot, ADMINS
 from time import sleep
 import handlers
-from utils.db import create_user_table
+from utils.db import create_user_table, create_messages_table
 
 def notify_admin():
     """
@@ -18,4 +18,5 @@ def notify_admin():
 if __name__ == "__main__":
     notify_admin()
     create_user_table()
+    create_messages_table()
     bot.infinity_polling()
